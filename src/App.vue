@@ -14,7 +14,7 @@
                         </router-link>
                         <ul class="dropdown-menu" aria-labelledby="energie-dropdown">
                         <li>
-                            <router-link to="/energies/prix-electricite-gaz" class="dropdown-item">Prix Gaz/Electricité</router-link>
+                            <router-link to="/energy/price-electricity-gas" class="dropdown-item">Prix Gaz/Electricité</router-link>
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -31,6 +31,10 @@
       </div>
   <router-view/>
 </template>
+
+<script lang="ts">
+
+</script>
 
 <style>
 nav a.router-link-exact-active {
