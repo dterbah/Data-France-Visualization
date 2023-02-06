@@ -15,6 +15,9 @@
                     <li>
                         <router-link to="/energy/price-electricity-gas" class="dropdown-item">Prix Gaz/Electricité</router-link>
                     </li>
+                    <li>
+                        <router-link to="/energy/edf-production" class="dropdown-item">Production énergie EDF</router-link>
+                    </li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>

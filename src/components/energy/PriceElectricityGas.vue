@@ -73,7 +73,7 @@ export default defineComponent({
                 labels: this.chartLabels,
                 datasets: [{
                     data: this.electricityData,
-                    label: "Prix de l'électricité en France(€/MWh)",
+                    label: "Prix de l'électricité en France (€/MWh)",
                     borderColor: '#A5C8ED'
                 }, {
                     data: this.gasData,
@@ -93,8 +93,6 @@ export default defineComponent({
                     borderColor: 'black'
                 })
             }
-
-            console.log(configuration)
 
             return configuration
         },
