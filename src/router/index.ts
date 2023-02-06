@@ -5,6 +5,7 @@ import HomeView from './../views/HomeView.vue';
 import EnergyView from './../views/EnergyView.vue';
 import PriceElectricityGas from '../components/energy/PriceElectricityGas.vue';
 import EDFEnergyProduction from '../components/energy/EDFEnergyProduction.vue';
+import GNCConsumption from '../components/energy/GNCConsumption.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -25,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'edf-production',
             components: {
                 'energy-section': EDFEnergyProduction
+            }
+        }, {
+            path: 'gnc',
+            components: {
+                'energy-section': GNCConsumption
             }
         }]
     }

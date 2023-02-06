@@ -1,5 +1,6 @@
 import json from '../data/energy/price-electricity-gas.json';
 import edfJSON from '../data/energy/edf.json';
+import gncJSON from '../data/energy/gnc.json';
 
 export type PriceElectricityGasInfo = {
     year: number;
@@ -15,6 +16,12 @@ export type EDFInfo = {
     unity: string;
     subCategory: string;
     year: number;
+}
+
+export type GNCInfo = {
+    region: string;
+    year: number;
+    consumptionKWH: number;
 }
 
 
@@ -88,5 +95,24 @@ export class EnergyService {
         })
 
         return data;
-    } 
+    }
+
+    static getGNCData() : GNCInfo[] {
+        const data: GNCInfo[] = [];
+
+        gncJSON.forEach(currentData => {
+            const { fields } = currentData;
+            const year: number = parseInt(fields.annee);
+            const region: string = fields.region;
+            const consumptionKWH = fields.consommation_kwh_pcs;
+            
+            data.push({
+                year,
+                region,
+                consumptionKWH
+            })
+        })
+
+        return data;
+    }
 }
