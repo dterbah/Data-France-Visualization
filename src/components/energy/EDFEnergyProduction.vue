@@ -45,7 +45,7 @@ export default defineComponent({
     },
 
     computed: {
-        chartLabels() {
+        chartLabels() : Array<string> {
             return this.years.map(year => `Année ${year}`)
         },
         chartConfiguration() : ChartData<"line"> {
